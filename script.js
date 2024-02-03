@@ -1,3 +1,5 @@
+let currentUrl = location.href;
+console.log(currentUrl);
 const video = document.querySelector("video");
 const myPause = document.querySelector("video").pause;
 const myPlay = document.querySelector("video").play;
@@ -38,6 +40,11 @@ let observer = new MutationObserver(function (mutations) {
 
     let node = mutation.addedNodes[0];
     // console.log(mutation.addedNodes);
+    if(node.baseURI != undefined && node.baseURI != currentUrl) {
+      video.myPlay();
+      currentUrl = node.baseURI
+    }
+
     if (node.classList == undefined) {
       return
     }
