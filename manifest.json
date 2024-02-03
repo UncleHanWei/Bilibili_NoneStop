@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Bilibili No Login",
+    "name": "Bilibili NoneStop",
     "description": "Stop Bilibili from pause video and popup when user not login",
     "version": "1.0",
     "permissions": [
